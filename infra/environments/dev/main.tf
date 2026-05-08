@@ -61,11 +61,12 @@ module "iam" {
 module "lambda" {
   source = "../../modules/lambda"
 
-  name_prefix        = "${local.service_name}-${local.environment}"
-  lambda_role_arn    = module.iam.lambda_role_arn
-  kms_key_arn        = module.kms.key_arn
-  artifact_s3_bucket = var.artifact_s3_bucket
-  artifact_s3_key    = var.artifact_s3_key
+  name_prefix                    = "${local.service_name}-${local.environment}"
+  lambda_role_arn                = module.iam.lambda_role_arn
+  kms_key_arn                    = module.kms.key_arn
+  artifact_s3_bucket             = var.artifact_s3_bucket
+  artifact_s3_key                = var.artifact_s3_key
+  reserved_concurrent_executions = -1
 
   environment_variables = {
     TABLE_NAME  = module.dynamodb.table_name
