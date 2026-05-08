@@ -13,7 +13,7 @@ variable "artifact_s3_bucket" {
 variable "artifact_s3_key" {
   description = "S3 key for the Lambda deployment artifact."
   type        = string
-  default     = "bootstrap/serverless-java-api-placeholder.zip"
+  default     = "artifacts/serverless-java-api.jar"
 }
 
 variable "alarm_sns_topic_arn" {
