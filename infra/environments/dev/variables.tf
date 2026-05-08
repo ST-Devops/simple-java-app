@@ -1,12 +1,13 @@
 variable "aws_region" {
   description = "AWS region for this environment."
   type        = string
-  default     = "us-east-1"
+  default     = "ap-south-1"
 }
 
 variable "artifact_s3_bucket" {
   description = "S3 bucket containing the Lambda deployment artifact. Managed by the deployment pipeline, not Terraform."
   type        = string
+  default = "devops-test-iac-leambda"
 }
 
 variable "artifact_s3_key" {
