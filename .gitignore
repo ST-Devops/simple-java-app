@@ -1,0 +1,8 @@
+target/
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+*.tfplan
+*.log
+.idea/
+.vscode/
